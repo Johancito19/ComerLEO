@@ -63,9 +63,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-<<<<<<< HEAD
-
-=======
 #app {
   width: 100%;
 
@@ -143,7 +140,6 @@ body {
 
   font-weight: 400;
 }
->>>>>>> 51ed753cdcbf8920471747e5bedb77248c69d399
 
 button {
   border: 1px solid var(--green-dark);
@@ -565,8 +561,4 @@ tbody tr.is-selected {
   .value {
     font-size: 28px;
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 51ed753cdcbf8920471747e5bedb77248c69d399
