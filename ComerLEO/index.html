@@ -3,116 +3,143 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="stylesheet" href="src/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>comerleo</title>
-  </head>
+
+  
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/style.css" />
   <body>
     <div id="app"></div>
 
-    <h1>COMERCIALIZACION DE LOW EARTH ORBIT</h1>
+    <div class="container py-4">
 
-    <div class="panel" style="display:flex; align-items:center; justify-content:space-between;">
-      <div>
-      <p style="font-size:18px; font-weight:500; margin:0;">Astro Sweepers</p>
-      <p style="font-size:13px; color:var(--text-dim); margin:4px 0 0;">
-        Panel de riesgo e intercepción de desechos orbitales
-      </p>
-    </div>
-     <button>Exportar reporte DAS</button>
-  </div>
+      <h1 class="h3 mb-4 fw-bold">COMERCIALIZACION DE LOW EARTH ORBIT</h1>
 
-    </div>
-
-
-
-    <div class="metrics-grid">
-        <div class="panel">
-          <p class="label">Objetos rastreados</p>
-          <p class="value">6</p>
-      </div>
-
-      <div class="panel">
-        <p class="label">Riesgo alto</p>
-        <p class="value" style="color:var(--danger);">2</p>
-      </div>
-
-
-      <div class="panel">
-        <p class="label">Reportes DAS generados</p>
-        <p class="value">1,204</p>
-      </div>
-
-      <div class="panel">
-        <p class="label">Tasa de cumplimiento</p>
-        <p class="value" style="color:var(--success);">67%</p>
-      </div>
-
-
-
-        <div class="">
-          <input type="text" placeholder="Buscar por ID u operador" />
-          <select>
-          <option>Todos los riesgos</option>
-              <option>Alto</option>
-          <option>Medio</option>
-          <option>Bajo</option>
-          </select>
+      <!-- Encabezado -->
+      <div class="card shadow-sm mb-4">
+        <div class="card-body d-flex align-items-center justify-content-between flex-wrap gap-2">
+          <div>
+            <p class="fs-5 fw-bold mb-0">Astro Sweepers</p>
+            <p class="small text-dim mb-0">
+              Panel de riesgo e intercepción de desechos orbitales
+            </p>
           </div>
+          <button class="btn btn-success fw-bold">Exportar reporte DAS</button>
+        </div>
+      </div>
 
-    
+      <!-- Métricas -->
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3 mb-4">
+        <div class="col">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <p class="small text-dim text-uppercase fw-semibold mb-1">Objetos rastreados</p>
+              <p class="fs-3 fw-bold mb-0">6</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <p class="small text-dim text-uppercase fw-semibold mb-1">Riesgo alto</p>
+              <p class="fs-3 fw-bold mb-0 text-danger">2</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <p class="small text-dim text-uppercase fw-semibold mb-1">Reportes DAS generados</p>
+              <p class="fs-3 fw-bold mb-0">1,204</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <p class="small text-dim text-uppercase fw-semibold mb-1">Tasa de cumplimiento</p>
+              <p class="fs-3 fw-bold mb-0 text-success">67%</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Buscador y filtro -->
+      <div class="row g-2 mb-4">
+        <div class="col-md-8">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Buscar por ID u operador"
+          />
+        </div>
+        <div class="col-md-4">
+          <select class="form-select">
+            <option>Todos los riesgos</option>
+            <option>Alto</option>
+            <option>Medio</option>
+            <option>Bajo</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Tabla -->
+      <div class="card shadow-sm p-0 overflow-hidden">
+        <table class="table table-hover mb-0 align-middle">
+          <thead class="table-light">
+            <tr>
+              <th>Objeto</th>
+              <th>Operador</th>
+              <th>Índice de riesgo</th>
+              <th>Actualizado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="table-success">
+              <td>SAT-2291</td>
+              <td class="text-dim">OrbitCom</td>
+              <td><span class="badge text-bg-danger">82 · Alto</span></td>
+              <td>2026-09-25</td>
+            </tr>
+            <tr>
+              <td>DEB-0043</td>
+              <td class="text-dim">Sin dueño registrado</td>
+              <td><span class="badge text-bg-danger">76 · Alto</span></td>
+              <td>2026-09-24</td>
+            </tr>
+            <tr>
+              <td>SAT-1187</td>
+              <td class="text-dim">Meridian Space</td>
+              <td><span class="badge text-bg-warning">48 · Medio</span></td>
+              <td>2026-09-25</td>
+            </tr>
+            <tr>
+              <td>SAT-0912</td>
+              <td class="text-dim">OrbitCom</td>
+              <td><span class="badge text-bg-warning">33 · Medio</span></td>
+              <td>2026-09-22</td>
+            </tr>
+            <tr>
+              <td>SAT-3350</td>
+              <td class="text-dim">Helio Networks</td>
+              <td><span class="badge text-bg-success">19 · Bajo</span></td>
+              <td>2026-09-23</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
     </div>
 
-    <div class="panel" style="padding:0; overflow:hidden;">
-    <table>
-      <thead>
-        <tr>
-          <th>Objeto</th>
-          <th>Operador</th>
-          <th>Índice de riesgo</th>
-          <th>Actualizado</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="is-selected">
-          <td>SAT-2291</td>
-          <td style="font-family:var(--sans); color:var(--text-dim);">OrbitCom</td>
-          <td><span class="badge badge--danger">82 · Alto</span></td>
-          <td>2026-09-25</td>
-        </tr>
-        <tr>
-          <td>DEB-0043</td>
-          <td style="font-family:var(--sans); color:var(--text-dim);">Sin dueño registrado</td>
-          <td><span class="badge badge--danger">76 · Alto</span></td>
-          <td>2026-09-24</td>
-        </tr>
-        <tr>
-          <td>SAT-1187</td>
-          <td style="font-family:var(--sans); color:var(--text-dim);">Meridian Space</td>
-          <td><span class="badge badge--warning">48 · Medio</span></td>
-          <td>2026-09-25</td>
-        </tr>
-        <tr>
-          <td>SAT-0912</td>
-          <td style="font-family:var(--sans); color:var(--text-dim);">OrbitCom</td>
-          <td><span class="badge badge--warning">33 · Medio</span></td>
-          <td>2026-09-22</td>
-        </tr>
-        <tr>
-          <td>SAT-3350</td>
-          <td style="font-family:var(--sans); color:var(--text-dim);">Helio Networks</td>
-          <td><span class="badge badge--success">19 · Bajo</span></td>
-          <td>2026-09-23</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-
-  <script type="module" src="/src/main.ts"></script>
-
+    <!-- Bootstrap JS (dropdowns, etc.) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="/src/main.ts"></script>
   </body>
-
-
 </html>
-
