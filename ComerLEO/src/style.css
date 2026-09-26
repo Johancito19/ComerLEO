@@ -63,6 +63,84 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+#app {
+  width: 100%;
+
+  max-width: 1180px;
+
+  margin: 0 auto;
+
+  position: relative;
+}
+
+.panel {
+  position: relative;
+
+  background: var(--panel);
+
+  border: 1px solid var(--border);
+
+  border-radius: 14px;
+
+  padding: 20px;
+
+  margin-bottom: 18px;
+
+  box-shadow:
+    0 4px 16px rgba(30, 50, 38, 0.055);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.panel::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 20px;
+
+  width: 45px;
+  height: 3px;
+
+  background: var(--green);
+
+  border-radius: 0 0 5px 5px;
+}
+
+.panel > div p:first-child {
+  color: var(--text);
+
+  font-size: 19px;
+
+  font-weight: 700;
+
+  letter-spacing: -0.3px;
+}
+
+.panel > div p:first-child::before {
+  content: "✦";
+
+  color: var(--green);
+
+  margin-right: 7px;
+
+  font-size: 14px;
+}
+
+.panel > div p:nth-child(2) {
+  color: var(--text-dim);
+
+  font-size: 13px;
+
+  font-weight: 400;
+}
+
 button {
   border: 1px solid var(--green-dark);
 
