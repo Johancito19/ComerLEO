@@ -1,66 +1,68 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>comerleo</title>
-  </head>
-  <body>
-    <div id="app"></div>
 
-    <div class="panel" style="display:flex; align-items:center; justify-content:space-between;">
-      <div>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>comerleo</title>
+</head>
+
+<body>
+  <div id="app"></div>
+
+  <div class="panel" style="display:flex; align-items:center; justify-content:space-between;">
+    <div>
       <p style="font-size:18px; font-weight:500; margin:0;">Astro Sweepers</p>
       <p style="font-size:13px; color:var(--text-dim); margin:4px 0 0;">
         Panel de riesgo e intercepción de desechos orbitales
       </p>
     </div>
-     <button>Exportar reporte DAS</button>
+    <button>Exportar reporte DAS</button>
   </div>
 
+  </div>
+
+
+
+  <div class="metrics-grid">
+    <div class="panel">
+      <p class="label">Objetos rastreados</p>
+      <p class="value">6</p>
+    </div>
+
+    <div class="panel">
+      <p class="label">Riesgo alto</p>
+      <p class="value" style="color:var(--danger);">2</p>
+    </div>
+
+
+    <div class="panel">
+      <p class="label">Reportes DAS generados</p>
+      <p class="value">1,204</p>
+    </div>
+
+    <div class="panel">
+      <p class="label">Tasa de cumplimiento</p>
+      <p class="value" style="color:var(--success);">67%</p>
     </div>
 
 
 
-    <div class="metrics-grid">
-        <div class="panel">
-          <p class="label">Objetos rastreados</p>
-          <p class="value">6</p>
-      </div>
-
-      <div class="panel">
-        <p class="label">Riesgo alto</p>
-        <p class="value" style="color:var(--danger);">2</p>
-      </div>
-
-
-      <div class="panel">
-        <p class="label">Reportes DAS generados</p>
-        <p class="value">1,204</p>
-      </div>
-
-      <div class="panel">
-        <p class="label">Tasa de cumplimiento</p>
-        <p class="value" style="color:var(--success);">67%</p>
-      </div>
-
-
-
-        <div class="panel filtros-bar">
-          <input type="text" placeholder="Buscar por ID u operador" />
-          <select>
-          <option>Todos los riesgos</option>
-              <option>Alto</option>
-          <option>Medio</option>
-          <option>Bajo</option>
-          </select>
-          </div>
-
-    
+    <div class="panel filtros-bar">
+      <input type="text" placeholder="Buscar por ID u operador" />
+      <select>
+        <option>Todos los riesgos</option>
+        <option>Alto</option>
+        <option>Medio</option>
+        <option>Bajo</option>
+      </select>
     </div>
 
-    <div class="panel" style="padding:0; overflow:hidden;">
+
+  </div>
+
+  <div class="panel" style="padding:0; overflow:hidden;">
     <table>
       <thead>
         <tr>
@@ -105,11 +107,21 @@
     </table>
   </div>
 
+  <div class="panel">
+    <div style="display:flex; justify-content:space-between; align-items:baseline;">
+      <p class="label" style="margin:0;">Reporte DAS — SAT-2291</p>
+      <span class="badge badge--danger">82 · Alto</span>
+    </div>
+    <p style="font-size:13px; color:var(--text-dim); margin:10px 0 4px;">Generado 2026-09-26</p>
+    <p style="font-size:14px; margin:0;">
+      Requiere revisión: probabilidad de conjunción por encima del umbral operativo.
+    </p>
+  </div>
+
 
   <script type="module" src="/src/main.ts"></script>
 
-  </body>
+</body>
 
 
 </html>
-
