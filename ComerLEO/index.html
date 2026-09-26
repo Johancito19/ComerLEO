@@ -8,6 +8,49 @@
   </head>
   <body>
     <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
+
+    <div class="panel" style="display:flex; align-items:center; justify-content:space-between;">
+      <div>
+      <p style="font-size:18px; font-weight:500; margin:0;">Astro Sweepers</p>
+      <p style="font-size:13px; color:var(--text-dim); margin:4px 0 0;">
+        Panel de riesgo e intercepción de desechos orbitales
+      </p>
+    </div>
+     <button>Exportar reporte DAS</button>
+  </div>
+
+    </div>
+
+
+
+    <div class="metrics-grid">
+        <div class="panel">
+          <p class="label">Objetos rastreados</p>
+          <p class="value">6</p>
+      </div>
+
+      <div class="panel">
+        <p class="label">Riesgo alto</p>
+        <p class="value" style="color:var(--danger);">2</p>
+      </div>
+
+
+      <div class="panel">
+        <p class="label">Reportes DAS generados</p>
+        <p class="value">1,204</p>
+      </div>
+
+      <div class="panel">
+        <p class="label">Tasa de cumplimiento</p>
+        <p class="value" style="color:var(--success);">67%</p>
+      </div>
+
+    
+    </div>
+
+
   </body>
+
+
 </html>
+
