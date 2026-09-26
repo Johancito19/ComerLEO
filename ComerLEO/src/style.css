@@ -63,7 +63,87 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+<<<<<<< HEAD
 
+=======
+#app {
+  width: 100%;
+
+  max-width: 1180px;
+
+  margin: 0 auto;
+
+  position: relative;
+}
+
+.panel {
+  position: relative;
+
+  background: var(--panel);
+
+  border: 1px solid var(--border);
+
+  border-radius: 14px;
+
+  padding: 20px;
+
+  margin-bottom: 18px;
+
+  box-shadow:
+    0 4px 16px rgba(30, 50, 38, 0.055);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.panel::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 20px;
+
+  width: 45px;
+  height: 3px;
+
+  background: var(--green);
+
+  border-radius: 0 0 5px 5px;
+}
+
+.panel > div p:first-child {
+  color: var(--text);
+
+  font-size: 19px;
+
+  font-weight: 700;
+
+  letter-spacing: -0.3px;
+}
+
+.panel > div p:first-child::before {
+  content: "✦";
+
+  color: var(--green);
+
+  margin-right: 7px;
+
+  font-size: 14px;
+}
+
+.panel > div p:nth-child(2) {
+  color: var(--text-dim);
+
+  font-size: 13px;
+
+  font-weight: 400;
+}
+>>>>>>> 51ed753cdcbf8920471747e5bedb77248c69d399
 
 button {
   border: 1px solid var(--green-dark);
@@ -129,9 +209,6 @@ button:active {
   justify-content: center;
 }
 
-
-/* Hover */
-
 .metrics-grid .panel:hover {
   transform: translateY(-3px);
 
@@ -141,37 +218,21 @@ button:active {
     0 9px 22px rgba(30, 50, 38, 0.09);
 }
 
-/* Objetos rastreados */
-
 .metrics-grid .panel:nth-child(1)::before {
   background: #202522;
 }
-
-
-/* Riesgo alto */
 
 .metrics-grid .panel:nth-child(2)::before {
   background: var(--danger);
 }
 
-
-/* Reportes DAS */
-
 .metrics-grid .panel:nth-child(3)::before {
   background: var(--green);
 }
 
-
-/* Cumplimiento */
-
 .metrics-grid .panel:nth-child(4)::before {
   background: var(--green);
 }
-
-
-/* =========================================================
-   LABELS
-========================================================= */
 
 .label {
   margin: 0;
@@ -187,11 +248,6 @@ button:active {
   letter-spacing: 0.9px;
 }
 
-
-/* =========================================================
-   NÚMEROS KPI
-========================================================= */
-
 .value {
   margin: 8px 0 0;
 
@@ -206,24 +262,13 @@ button:active {
   letter-spacing: -1px;
 }
 
-
-/* Número del KPI de riesgo */
-
 .metrics-grid .panel:nth-child(2) .value {
   color: var(--danger) !important;
 }
 
-
-/* Número del KPI de cumplimiento */
-
 .metrics-grid .panel:nth-child(4) .value {
   color: var(--green) !important;
 }
-
-
-/* =========================================================
-   FILTROS
-========================================================= */
 
 .filtros-bar {
   display: flex;
@@ -234,11 +279,6 @@ button:active {
 
   background: var(--panel-soft);
 }
-
-
-/* =========================================================
-   INPUTS Y SELECT
-========================================================= */
 
 input,
 select {
@@ -279,9 +319,6 @@ select {
   cursor: pointer;
 }
 
-
-/* Placeholder */
-
 input::placeholder {
   color: #a0aaa4;
 
@@ -289,9 +326,6 @@ input::placeholder {
 
   font-weight: 400;
 }
-
-
-/* Focus */
 
 input:focus,
 select:focus {
@@ -301,11 +335,6 @@ select:focus {
     0 0 0 3px rgba(63, 143, 95, 0.10);
 }
 
-
-/* =========================================================
-   TABLA
-========================================================= */
-
 table {
   width: 100%;
 
@@ -313,9 +342,6 @@ table {
 
   font-family: var(--sans);
 }
-
-
-/* Encabezado */
 
 thead {
   background: #f7f9f8;
@@ -340,9 +366,6 @@ th {
   border-bottom: 1px solid var(--border);
 }
 
-
-/* Celdas */
-
 td {
   padding: 16px 18px;
 
@@ -355,9 +378,6 @@ td {
   border-bottom: 1px solid var(--border-light);
 }
 
-
-/* Hover */
-
 tbody tr {
   transition:
     background 0.2s ease;
@@ -367,22 +387,12 @@ tbody tr:hover {
   background: #f9fbfa;
 }
 
-
-/* =========================================================
-   FILA SELECCIONADA
-========================================================= */
-
 tbody tr.is-selected {
   background: #f1f8f3;
 
   box-shadow:
     inset 3px 0 0 var(--green);
 }
-
-
-/* =========================================================
-   BADGES
-========================================================= */
 
 .badge {
   display: inline-flex;
@@ -404,9 +414,6 @@ tbody tr.is-selected {
   border: 1px solid transparent;
 }
 
-
-/* Punto */
-
 .badge::before {
   content: "";
 
@@ -421,11 +428,6 @@ tbody tr.is-selected {
   background: currentColor;
 }
 
-
-/* =========================================================
-   RIESGO ALTO
-========================================================= */
-
 .badge--danger {
   color: var(--danger);
 
@@ -433,11 +435,6 @@ tbody tr.is-selected {
 
   border-color: #ffd3d3;
 }
-
-
-/* =========================================================
-   RIESGO MEDIO
-========================================================= */
 
 .badge--warning {
   color: var(--warning);
@@ -447,11 +444,6 @@ tbody tr.is-selected {
   border-color: #f1dfa9;
 }
 
-
-/* =========================================================
-   RIESGO BAJO
-========================================================= */
-
 .badge--success {
   color: var(--success);
 
@@ -460,28 +452,17 @@ tbody tr.is-selected {
   border-color: #cce4d3;
 }
 
-
-/* =========================================================
-   REPORTE DAS
-========================================================= */
-
 .panel:last-child {
   background: #ffffff;
 
   border-color: #dfe6e1;
 }
 
-
-/* Línea del reporte */
-
 .panel:last-child::before {
   width: 75px;
 
   background: var(--green);
 }
-
-
-/* Marca DAS */
 
 .panel:last-child::after {
   content: "DAS";
@@ -505,19 +486,9 @@ tbody tr.is-selected {
   pointer-events: none;
 }
 
-
-/* =========================================================
-   SCROLL DE TABLA
-========================================================= */
-
 .panel:has(table) {
   overflow-x: auto;
 }
-
-
-/* =========================================================
-   BARRA DE SCROLL
-========================================================= */
 
 ::-webkit-scrollbar {
   width: 7px;
@@ -539,11 +510,6 @@ tbody tr.is-selected {
   background: #aeb9b2;
 }
 
-
-/* =========================================================
-   TABLET
-========================================================= */
-
 @media (max-width: 850px) {
 
   body {
@@ -558,11 +524,6 @@ tbody tr.is-selected {
     min-width: 700px;
   }
 }
-
-
-/* =========================================================
-   CELULAR
-========================================================= */
 
 @media (max-width: 550px) {
 
@@ -604,4 +565,8 @@ tbody tr.is-selected {
   .value {
     font-size: 28px;
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 51ed753cdcbf8920471747e5bedb77248c69d399
