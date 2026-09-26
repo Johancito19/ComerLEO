@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800&display=swap');
+
+:root {
+
+  --bg: #ffffff;
+
+  --panel: #ffffff;
+  --panel-soft: #f8faf9;
+
+  --green: #3f8f5f;
+  --green-dark: #2f7049;
+  --green-light: #e9f5ed;
+
+  --danger: #d94b4b;
+  --danger-bg: #fff0f0;
+
+  --warning: #c58a24;
+  --warning-bg: #fff7df;
+
+  --success: #3f8f5f;
+  --success-bg: #e9f5ed;
+
+  --text: #202522;
+  --text-dim: #78817c;
+  --text-light: #9ba39e;
+
+  --border: #e5e9e6;
+  --border-light: #eef1ef;
+
+  --sans: "Maven Pro", sans-serif;
+
+  --mono:
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Consolas,
+    monospace;
+}
