@@ -4,7 +4,9 @@ import * as glob from "glob";
 
 const __dirname = import.meta.dirname;
 
-const base_path = import.meta.env?.BASE_URL ?? '';
+
+const base_path = '/ComerLEO/'; 
+
 function obtenerHtmlFiles() {
     return Object.fromEntries(
         glob.sync(
@@ -27,9 +29,9 @@ function obtenerHtmlFiles() {
 export default defineConfig(
     {
         appType: 'mpa',
-        base: base_path,
+        base: base_path, 
         build: {
-            rolldownOptions: {
+            rolldownOptions: { 
                 input: obtenerHtmlFiles()
             }
         },
